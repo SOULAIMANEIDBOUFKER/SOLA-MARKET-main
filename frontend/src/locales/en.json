@@ -1,0 +1,222 @@
+{
+  "nav": {
+    "brand": "SOLA-MARKET",
+    "home": "Home",
+    "cart": "Cart",
+    "dashboard": "Dashboard",
+    "logout": "Log Out",
+    "signup": "Sign Up",
+    "login": "Login",
+    "language": "Language"
+  },
+  "home": {
+    "title": "Discover our categories",
+    "subtitle": "Explore the latest trends with a modern shopping experience.",
+
+    "newArrivalsTitle": "New Arrivals",
+    "newArrivalsHint": "Latest products added to the store.",
+    "noNewProducts": "No products yet.",
+
+    "categoriesTitle": "Shop by category",
+    "categoriesHint": "Choose a category to get started.",
+
+    "featuredTitle": "Featured Products",
+    "featuredHint": "Hand-picked items you'll love.",
+    "noFeatured": "No featured products yet."
+  },
+  "categories": {
+    "jeans": "Jeans",
+    "tshirts": "T-Shirts",
+    "shoes": "Shoes",
+    "glasses": "Glasses",
+    "jackets": "Jackets",
+    "suits": "Suits",
+    "bags": "Bags"
+  },
+  "product": {
+    "addToCart": "Add to cart",
+    "added": "added",
+    "pleaseLoginToAdd": "Please login to add products to cart",
+    "price": "Price",
+    "fastDelivery": "Fast delivery"
+  },
+  "categoryPage": {
+    "noProducts": "No products found"
+  },
+  "common": {
+    "loading": "Loading...",
+    "loadingShort": "Loading",
+    "genericError": "Something went wrong."
+  },
+  "auth": {
+    "createAccount": "Create your account",
+    "loginTitle": "Login",
+    "signupTitle": "Create your account",
+
+    "emailAddress": "Email address",
+    "email": "Email address",
+    "emailPlaceholder": "you@example.com",
+
+    "password": "Password",
+    "passwordPlaceholder": "••••••••",
+
+    "confirmPassword": "Confirm Password",
+
+    "fullName": "Full name",
+    "fullNamePlaceholder": "John Doe",
+
+    "notMember": "Not a member?",
+    "alreadyHaveAccount": "Already have an account?",
+    "noAccount": "Not a member?",
+    "haveAccount": "Already have an account?",
+    "loginHere": "Login here",
+    "signupNow": "Sign up now",
+
+    "signup": "Sign Up",
+    "login": "Login",
+    "loginButton": "Login",
+    "signupButton": "Sign up"
+  },
+  "cart": {
+    "back": "Back",
+    "title": "Your Shopping Cart",
+    "subtitle": "Review and manage your items",
+
+    "secureCheckout": "Secure checkout",
+    "freeShippingLabel": "Free shipping",
+    "easyReturns": "Easy returns",
+
+    "needMore": "Need more?",
+    "continueShoppingBtn": "Continue Shopping",
+
+    "emptyLead": "Looks like you",
+    "emptyRest": "haven't added anything to your cart yet.",
+    "emptyTitle": "Your cart is empty",
+    "emptySubtitle": "Looks like you haven't added anything to your cart yet.",
+    "startShopping": "Start Shopping",
+
+    "viewNewArrivals": "View New Arrivals",
+    "popularCategories": "Popular Categories",
+    "shopNow": "Shop now",
+
+    "chooseQty": "Choose quantity:",
+    "chooseQuantity": "Choose quantity:",
+    "decreaseQuantity": "Decrease quantity",
+    "increaseQuantity": "Increase quantity",
+    "removeItem": "Remove item",
+
+    "continueShopping": "Continue Shopping",
+    "productAdded": "Product added to cart",
+    "addToCart": "Add to cart",
+
+    "voucherQuestion": "Do you have a voucher or gift card?",
+    "enterCode": "Enter code here",
+    "applyCode": "Apply Code",
+    "appliedCoupon": "Applied Coupon",
+    "availableCoupon": "Your Available Coupon",
+    "removeCoupon": "Remove Coupon",
+    "off": "off",
+
+    "orderSummary": "Order summary",
+    "originalPrice": "Original price",
+    "savings": "Savings",
+    "coupon": "Coupon",
+    "total": "Total",
+    "proceedToCheckout": "Proceed to Checkout",
+    "or": "or",
+
+    "peopleAlsoBought": "People also bought",
+
+    "trust": {
+      "freeShippingTitle": "Free Shipping",
+      "freeShippingHint": "Over $50",
+      "returnsTitle": "30-Day Returns",
+      "returnsHint": "Easy & Free",
+      "securePaymentTitle": "Secure Payment",
+      "securePaymentHint": "256-bit SSL",
+      "qualityTitle": "Quality Guarantee",
+      "qualityHint": "Premium Products"
+    }
+  },
+  "coupon": {
+    "question": "Do you have a voucher or gift card?",
+    "voucherPlaceholder": "Enter code here",
+    "apply": "Apply Code",
+    "applied": "Applied Coupon",
+    "appliedSuccess": "Coupon applied successfully",
+    "removed": "Coupon removed",
+    "failedApply": "Failed to apply coupon"
+  },
+  "checkout": {
+    "orderSummary": "Order summary",
+    "originalPrice": "Original price",
+    "couponPrefix": "Coupon (",
+    "minusDollar": "-$",
+    "or": "or",
+    "proceed": "Proceed to Checkout"
+  },
+  "purchase": {
+    "processing": "Processing...",
+    "processingNow": "processing it now.",
+    "orderNumber": "Order number",
+    "estimatedDelivery": "Estimated delivery",
+    "deliveryRange": "3-5 business days",
+    "checkEmail": "Check your email for order details and updates.",
+    "noSession": "No session ID found in the URL",
+    "supportMsg": "If you encountered any issues during the checkout process, please don't hesitate to contact our support team."
+  },
+  "admin": {
+    "title": "Admin Dashboard",
+    "createProductTab": "Create Product",
+    "createNewProduct": "Create New Product",
+    "productsTab": "Products",
+    "analyticsTab": "Analytics",
+    "product": "Product",
+    "productName": "Product Name",
+    "description": "Description",
+    "price": "Price",
+    "category": "Category",
+    "image": "Image",
+    "actions": "Actions",
+    "featured": "Featured",
+    "imageUploaded": "Image uploaded",
+    "createProductBtn": "Create Product"
+  },
+  "analytics": {
+    "totalUsers": "Total Users",
+    "totalProducts": "Total Products",
+    "totalSales": "Total Sales",
+    "totalRevenue": "Total Revenue"
+  },
+  "errors": {
+    "generic": "An error occurred",
+    "logout": "An error occurred during logout",
+    "fetchProducts": "Failed to fetch products",
+    "fetchFeatured": "Error fetching featured products:",
+    "fetchAnalytics": "Error fetching analytics data:",
+    "fetchRecommendations": "An error occurred while fetching recommendations",
+    "createProduct": "Error creating a product",
+    "deleteProduct": "Failed to delete product",
+    "updateProduct": "Failed to update product",
+    "passwordsNoMatch": "Passwords do not match",
+    "fetchCoupon": "Error fetching coupon:"
+  },
+  
+  "footer": {
+      "role": "Full-Stack MERN Developer",
+    "about": "I build premium web experiences with clean UI, solid architecture, and production-ready MERN applications.",
+    "linksTitle": "Quick Links",
+    "links": { "home": "Home", "cart": "Cart", "dashboard": "Dashboard" },
+    "tipTitle": "Tip",
+    "tip": "Mark products as Featured in Admin to curate your homepage.",
+    "contactTitle": "Contact",
+    "emailLabel": "Email",
+    "availabilityLabel": "Availability",
+    "availability": "Open to an Ausbildung in Germany (2026)",
+    "backToTop": "Back to top",
+    "rights": "All rights reserved.",
+    "madeWith": "Built with React + Tailwind • MERN Platform"
+  }
+
+
+}

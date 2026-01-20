@@ -1,0 +1,222 @@
+{
+  "nav": {
+    "brand": "SOLA-MARKET",
+    "home": "Startseite",
+    "cart": "Warenkorb",
+    "dashboard": "Dashboard",
+    "logout": "Abmelden",
+    "signup": "Registrieren",
+    "login": "Anmelden",
+    "language": "Sprache"
+  },
+  "home": {
+    "title": "Unsere Kategorien entdecken",
+    "subtitle": "Entdecke die neuesten Trends mit einem modernen Shopping-Erlebnis.",
+
+    "newArrivalsTitle": "Neuheiten",
+    "newArrivalsHint": "Die neuesten Produkte im Store.",
+    "noNewProducts": "Noch keine Produkte.",
+
+    "categoriesTitle": "Nach Kategorie shoppen",
+    "categoriesHint": "Wähle eine Kategorie, um zu starten.",
+
+    "featuredTitle": "Empfohlene Produkte",
+    "featuredHint": "Handverlesene Artikel, die dir gefallen werden.",
+    "noFeatured": "Noch keine Featured-Produkte."
+  },
+  "categories": {
+    "jeans": "Jeans",
+    "tshirts": "T-Shirts",
+    "shoes": "Schuhe",
+    "glasses": "Brillen",
+    "jackets": "Jacken",
+    "suits": "Anzüge",
+    "bags": "Taschen"
+  },
+  "product": {
+    "addToCart": "In den Warenkorb",
+    "added": "hinzugefügt",
+    "pleaseLoginToAdd": "Bitte melde dich an, um Produkte in den Warenkorb zu legen",
+    "price": "Preis",
+    "fastDelivery": "Schnelle Lieferung"
+  },
+  "categoryPage": {
+    "noProducts": "Keine Produkte gefunden"
+  },
+  "common": {
+    "loading": "Lädt...",
+    "loadingShort": "Laden",
+    "genericError": "Etwas ist schiefgelaufen."
+  },
+  "auth": {
+    "createAccount": "Erstelle dein Konto",
+    "loginTitle": "Anmelden",
+    "signupTitle": "Konto erstellen",
+
+    "emailAddress": "E-Mail-Adresse",
+    "email": "E-Mail-Adresse",
+    "emailPlaceholder": "du@beispiel.com",
+
+    "password": "Passwort",
+    "passwordPlaceholder": "••••••••",
+
+    "confirmPassword": "Passwort bestätigen",
+
+    "fullName": "Vollständiger Name",
+    "fullNamePlaceholder": "Max Mustermann",
+
+    "notMember": "Noch kein Mitglied?",
+    "alreadyHaveAccount": "Du hast schon ein Konto?",
+    "noAccount": "Noch kein Mitglied?",
+    "haveAccount": "Schon ein Konto?",
+    "loginHere": "Hier anmelden",
+    "signupNow": "Jetzt registrieren",
+
+    "signup": "Registrieren",
+    "login": "Anmelden",
+    "loginButton": "Anmelden",
+    "signupButton": "Registrieren"
+  },
+  "cart": {
+    "back": "Zurück",
+    "title": "Dein Warenkorb",
+    "subtitle": "Überprüfe und verwalte deine Artikel",
+
+    "secureCheckout": "Sicherer Checkout",
+    "freeShippingLabel": "Kostenloser Versand",
+    "easyReturns": "Einfache Rückgabe",
+
+    "needMore": "Noch mehr?",
+    "continueShoppingBtn": "Weiter einkaufen",
+
+    "emptyLead": "Es sieht so aus, als hättest du",
+    "emptyRest": "noch nichts in deinen Warenkorb gelegt.",
+    "emptyTitle": "Dein Warenkorb ist leer",
+    "emptySubtitle": "Es sieht so aus, als hättest du noch nichts in deinen Warenkorb gelegt.",
+    "startShopping": "Jetzt shoppen",
+
+    "viewNewArrivals": "Neuheiten ansehen",
+    "popularCategories": "Beliebte Kategorien",
+    "shopNow": "Jetzt shoppen",
+
+    "chooseQty": "Menge wählen:",
+    "chooseQuantity": "Menge auswählen:",
+    "decreaseQuantity": "Menge verringern",
+    "increaseQuantity": "Menge erhöhen",
+    "removeItem": "Artikel entfernen",
+
+    "continueShopping": "Weiter shoppen",
+    "productAdded": "Produkt zum Warenkorb hinzugefügt",
+    "addToCart": "In den Warenkorb",
+
+    "voucherQuestion": "Hast du einen Gutschein oder eine Geschenkkarte?",
+    "enterCode": "Code hier eingeben",
+    "applyCode": "Code anwenden",
+    "appliedCoupon": "Angewendeter Gutschein",
+    "availableCoupon": "Verfügbarer Gutschein",
+    "removeCoupon": "Gutschein entfernen",
+    "off": "Rabatt",
+
+    "orderSummary": "Bestellübersicht",
+    "originalPrice": "Originalpreis",
+    "savings": "Ersparnis",
+    "coupon": "Gutschein",
+    "total": "Gesamt",
+    "proceedToCheckout": "Zur Kasse",
+    "or": "oder",
+
+    "peopleAlsoBought": "Andere kauften auch",
+
+    "trust": {
+      "freeShippingTitle": "Kostenloser Versand",
+      "freeShippingHint": "Ab 50 $",
+      "returnsTitle": "30 Tage Rückgabe",
+      "returnsHint": "Einfach & kostenlos",
+      "securePaymentTitle": "Sichere Zahlung",
+      "securePaymentHint": "256-bit SSL",
+      "qualityTitle": "Qualitätsgarantie",
+      "qualityHint": "Premium-Produkte"
+    }
+  },
+  "coupon": {
+    "question": "Hast du einen Gutschein oder eine Geschenkkarte?",
+    "voucherPlaceholder": "Code hier eingeben",
+    "apply": "Code anwenden",
+    "applied": "Angewendeter Gutschein",
+    "appliedSuccess": "Gutschein erfolgreich angewendet",
+    "removed": "Gutschein entfernt",
+    "failedApply": "Gutschein konnte nicht angewendet werden"
+  },
+  "checkout": {
+    "orderSummary": "Bestellübersicht",
+    "originalPrice": "Originalpreis",
+    "couponPrefix": "Gutschein (",
+    "minusDollar": "-$",
+    "or": "oder",
+    "proceed": "Zur Kasse"
+  },
+  "purchase": {
+    "processing": "Wird verarbeitet...",
+    "processingNow": "wird jetzt verarbeitet.",
+    "orderNumber": "Bestellnummer",
+    "estimatedDelivery": "Voraussichtliche Lieferung",
+    "deliveryRange": "3–5 Werktage",
+    "checkEmail": "Prüfe deine E-Mails für Bestelldetails und Updates.",
+    "noSession": "Keine Session-ID in der URL gefunden",
+    "supportMsg": "Wenn beim Checkout Probleme aufgetreten sind, kontaktiere bitte unseren Support."
+  },
+  "admin": {
+    "title": "Admin-Dashboard",
+    "createProductTab": "Produkt erstellen",
+    "createNewProduct": "Neues Produkt erstellen",
+    "productsTab": "Produkte",
+    "analyticsTab": "Analytics",
+    "product": "Produkt",
+    "productName": "Produktname",
+    "description": "Beschreibung",
+    "price": "Preis",
+    "category": "Kategorie",
+    "image": "Bild",
+    "actions": "Aktionen",
+    "featured": "Featured",
+    "imageUploaded": "Bild hochgeladen",
+    "createProductBtn": "Produkt erstellen"
+  },
+  "analytics": {
+    "totalUsers": "Gesamtbenutzer",
+    "totalProducts": "Gesamtprodukte",
+    "totalSales": "Gesamtverkäufe",
+    "totalRevenue": "Gesamtumsatz"
+  },
+  "errors": {
+    "generic": "Ein Fehler ist aufgetreten",
+    "logout": "Beim Abmelden ist ein Fehler aufgetreten",
+    "fetchProducts": "Produkte konnten nicht geladen werden",
+    "fetchFeatured": "Fehler beim Laden der Featured-Produkte:",
+    "fetchAnalytics": "Fehler beim Laden der Analytics-Daten:",
+    "fetchRecommendations": "Beim Laden der Empfehlungen ist ein Fehler aufgetreten",
+    "createProduct": "Fehler beim Erstellen eines Produkts",
+    "deleteProduct": "Produkt konnte nicht gelöscht werden",
+    "updateProduct": "Produkt konnte nicht aktualisiert werden",
+    "passwordsNoMatch": "Passwörter stimmen nicht überein",
+    "fetchCoupon": "Fehler beim Laden des Gutscheins:"
+  },
+  
+  "footer": {
+     "role": "Full-Stack MERN Entwickler",
+    "about": "Ich entwickle Premium-Web-Erlebnisse mit sauberem UI, solider Architektur und produktionsreifen MERN-Anwendungen.",
+    "linksTitle": "Schnelllinks",
+    "links": { "home": "Startseite", "cart": "Warenkorb", "dashboard": "Dashboard" },
+    "tipTitle": "Tipp",
+    "tip": "Markiere Produkte im Admin als „Featured“, um deine Startseite zu kuratieren.",
+    "contactTitle": "Kontakt",
+    "emailLabel": "E-Mail",
+    "availabilityLabel": "Verfügbarkeit",
+    "availability": "Offen für eine Ausbildung in Deutschland (2026)",
+    "backToTop": "Nach oben",
+    "rights": "Alle Rechte vorbehalten.",
+    "madeWith": "Erstellt mit React + Tailwind • MERN Plattform"
+  }
+}
+
+

@@ -1,5 +1,5 @@
 {
-	"name": "SOLA-MARKET",
+	"name": "sola-market",
 	"version": "1.0.0",
 	"description": "",
 	"main": "backend/server.js",
@@ -16,6 +16,7 @@
 		"bcryptjs": "^2.4.3",
 		"cloudinary": "^2.4.0",
 		"cookie-parser": "^1.4.6",
+		"cors": "^2.8.5",
 		"dotenv": "^16.4.5",
 		"express": "^4.19.2",
 		"fs-extra": "^11.3.3",

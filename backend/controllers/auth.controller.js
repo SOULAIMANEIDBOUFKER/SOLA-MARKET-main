@@ -18,19 +18,17 @@ const storeRefreshToken = async (userId, refreshToken) => {
   await redis.set(`refresh_token:${userId}`, refreshToken, "EX", 7 * 24 * 60 * 60);
 };
 
-const cookieOptions = () => {
-  const isProd = process.env.NODE_ENV === "production";
-  return {
-    httpOnly: true,
-    secure: isProd,                 
-    sameSite: isProd ? "none" : "lax",  
-    path: "/",                      
-  };
-};
+const isProd = () => process.env.NODE_ENV === "production";
+
+// ✅ خيارات كوكيز صحيحة لـ Vercel (frontend) + Render (backend)
+const cookieOptions = () => ({
+  httpOnly: true,
+  secure: isProd(),                 // ✅ لازم true في production (https)
+  sameSite: isProd() ? "none" : "lax", // ✅ ضروري cross-site
+  path: "/",                        // ✅ مهم
+});
 
 const setCookies = (res, accessToken, refreshToken) => {
-  const isProd = process.env.NODE_ENV === "production";
-
   res.cookie("accessToken", accessToken, {
     ...cookieOptions(),
     maxAge: 15 * 60 * 1000,
@@ -40,15 +38,12 @@ const setCookies = (res, accessToken, refreshToken) => {
     ...cookieOptions(),
     maxAge: 7 * 24 * 60 * 60 * 1000,
   });
-
-  // ملاحظة: `secure` في prod ضروري، و sameSite none ضروري كي تمشي بين vercel و render
 };
 
 export const signup = async (req, res) => {
   const { email, password, name } = req.body;
   try {
     const userExists = await User.findOne({ email });
-
     if (userExists) {
       return res.status(400).json({ message: "User already exists" });
     }
@@ -104,7 +99,7 @@ export const logout = async (req, res) => {
       await redis.del(`refresh_token:${decoded.userId}`);
     }
 
-    // ✅ لازم نفس options باش يحيدها مزيان
+    // ✅ clearCookie لازم نفس options (خصوصا sameSite/secure/path)
     res.clearCookie("accessToken", cookieOptions());
     res.clearCookie("refreshToken", cookieOptions());
 

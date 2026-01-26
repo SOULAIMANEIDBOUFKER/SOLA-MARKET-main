@@ -19,7 +19,6 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Koyeb/Proxies (important for cookies + secure headers behind proxies)
 app.set("trust proxy", 1);
 
 const __dirname = path.resolve();
@@ -29,35 +28,37 @@ app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
-const allowedOrigins = (process.env.CLIENT_URL || "")
-	.split(",")
-	.map((s) => s.trim())
-	.filter(Boolean);
+const allowedOriginsRaw =
+  process.env.CORS_ORIGINS || process.env.CLIENT_URL || "";
 
-app.use(
-	cors({
-		origin: (origin, callback) => {
-			// Allow requests with no origin (e.g., curl, server-to-server)
-			if (!origin) return callback(null, true);
+const allowedOrigins = allowedOriginsRaw
+  .split(",")
+  .map((s) => s.trim())
+  .filter(Boolean);
 
-			// If CLIENT_URL isn't set, allow all (useful locally)
-			if (allowedOrigins.length === 0) return callback(null, true);
+const corsOptions = {
+  origin: (origin, callback) => {
+    // Allow requests with no origin (curl / server-to-server)
+    if (!origin) return callback(null, true);
 
-			// Allow only whitelisted origins
-			if (allowedOrigins.includes(origin)) return callback(null, true);
+    // If no allowedOrigins set, allow all (local/dev)
+    if (allowedOrigins.length === 0) return callback(null, true);
 
-			return callback(new Error(`CORS blocked for origin: ${origin}`));
-		},
-		credentials: true,
-	})
-);
+    if (allowedOrigins.includes(origin)) return callback(null, true);
 
-// (Optional) handle preflight
-app.options("*", cors({ credentials: true }));
+    return callback(new Error(`CORS blocked for origin: ${origin}`));
+  },
+  credentials: true,
+  methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
+};
+
+app.use(cors(corsOptions));
+
+app.options("*", cors(corsOptions));
 
 // ---------- Routes ----------
 app.get("/health", (req, res) => {
-	res.status(200).json({ status: "ok" });
+  res.status(200).json({ status: "ok" });
 });
 
 app.use("/api/auth", authRoutes);
@@ -67,36 +68,40 @@ app.use("/api/coupons", couponRoutes);
 app.use("/api/payments", paymentRoutes);
 app.use("/api/analytics", analyticsRoutes);
 
-
+// ✅ Serve frontend فقط إذا كان dist موجود (اختياري)
 if (process.env.NODE_ENV === "production") {
-	const distPath = path.join(__dirname, "frontend", "dist");
+  const distPath = path.join(__dirname, "frontend", "dist");
 
-	if (fs.existsSync(distPath)) {
-		app.use(express.static(distPath));
+  if (fs.existsSync(distPath)) {
+    app.use(express.static(distPath));
 
-		app.get("*", (req, res) => {
-			res.sendFile(path.join(distPath, "index.html"));
-		});
-	}
+    // خليه fallback لصفحات الفرونت فقط، و مايمسّش /api
+    app.get("*", (req, res) => {
+      if (req.path.startsWith("/api")) {
+        return res.status(404).json({ message: "API route not found" });
+      }
+      res.sendFile(path.join(distPath, "index.html"));
+    });
+  }
 }
 
 // ---------- Start ----------
 const startServer = async () => {
-	try {
-		await connectDB();
+  try {
+    await connectDB();
 
-		app.listen(PORT, "0.0.0.0", () => {
-			console.log(`API is running on port ${PORT}`);
-			if (allowedOrigins.length > 0) {
-				console.log("CORS allowed origins:", allowedOrigins);
-			} else {
-				console.log("CORS allowed origins: (all) - CLIENT_URL not set");
-			}
-		});
-	} catch (err) {
-		console.error("Failed to start server:", err);
-		process.exit(1);
-	}
+    app.listen(PORT, "0.0.0.0", () => {
+      console.log(`API is running on port ${PORT}`);
+      console.log(
+        "CORS allowed origins:",
+        allowedOrigins.length ? allowedOrigins : "(all) - no CORS_ORIGINS/CLIENT_URL set"
+      );
+      console.log("NODE_ENV:", process.env.NODE_ENV);
+    });
+  } catch (err) {
+    console.error("Failed to start server:", err);
+    process.exit(1);
+  }
 };
 
 startServer();
